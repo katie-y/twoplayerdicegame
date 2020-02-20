@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "main.css">
+    <title>Dice Game</title>
+</head>
+<body>
+    <div class = "gameArea">
+        <div class = "diceAndButtons">
+
+            <div>
+                <button class = "playBtns" id = "rollBtn">Roll</button>
+            </div>
+            <div>
+                <button class = "playBtns" id = "holdBtn">Hold</button>
+            </div>
+                <div>
+                    <img id = "image" src = "img/dice1.png">
+            </div>    
+        </div> 
+        <div class = "players">
+        <div class = "player1">
+            <h1>Player One</h1>
+            <h2 id = "player1Name"> - </h2>
+            <h2 class = "score" id = "totalScore1">0</h2>
+            <h3>Current</h3>
+            <h3 class = "score" id = "currentScore1">0</h3>
+        </div> 
+            <div class = "player2">
+                <h1>Player Two</h1>
+                <h2 id = "player2Name"> - </h2>
+                <h2 class = "score" id = "totalScore2">0</h2>
+                <h3>Current</h3>
+                <h3 class = "score" id = "currentScore2">0</h3>
+            </div>     
+        </div>
+    </div>
+
+    <div class = "startOrWin">
+        <div id = "msg"> 
+            -
+            </div>
+            <div id = "rules">
+                <h2>Rules</h2>
+                    <br>
+                    <p>
+                        Take turns to roll the die as many times as you like. 
+                        <br>
+                        If you roll a 1 your current score will reset to zero and it's the next player's turn.
+                        <br>
+                        You can hold your turn at anytime, this will add the score of your current turn to your total score. It will then be the other player's turn.
+                        <br>
+                        The first person to get their total score over 20 is the winner! 
+                        <br>
+                        <br>
+                        Have fun!
+                </p>
+            </div>
+            <div>
+                <input id = "player1NameEntry">
+            </div>
+            <div>
+                <input id = "player2NameEntry">
+            </div>
+            <div>
+        <button id = "newGameBtn">New Game</button>
+        </div>
+
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
