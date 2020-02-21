@@ -38,8 +38,16 @@ rollBtn.addEventListener("click", () => {
         nextPlayer();
     }
     else if (currentScore[activePlayer] + totalScore[activePlayer] > 20) {
+        const nameBox1 = document.getElementById("player1NameEntry");
+        const nameBox2 = document.getElementById("player2NameEntry");
         startingScreen.style.display = "block";
-        winnersMsg.innerHTML = `Player ${activePlayer} wins! Well Done!`;
+        if (activePlayer == 1){
+            winnersMsg.innerHTML = `Player ${activePlayer} wins! Well done ${nameBox1.value}!`
+        } else {
+            winnersMsg.innerHTML = `Player ${activePlayer} wins! Well done ${nameBox2.value}!`
+
+        }
+
         winnersMsg.style.display = "block";
         gameArea.style.display = "none";
     }
@@ -95,16 +103,3 @@ const nextPlayer = () => {
         player2.style.border = "none";
     }
 }
-
-// document.addEventListener("click", () => {
-//     let player1 = document.querySelector(".player1");
-//     let player2 = document.querySelector(".player2");
-// if (activePlayer == 1){
-//     player1.style.border = "green 1em solid";
-//     player2.style.border = "none 1em solid";
-// } else {
-//     player2.style.border = "green 1em solid";
-//     player1.style.border = "none 1em solid";
-    
-// }   // change border colour depending on who's playing
-// });
